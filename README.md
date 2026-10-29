@@ -1,6 +1,6 @@
 # WK1-PM1 — VirtualBox and Kali Linux Cybersecurity Lab Setup
 
-![Kali Linux cybersecurity lab running in Oracle VirtualBox](evidence/07-kali-desktop.png)
+![Kali Linux cybersecurity lab running in Oracle VirtualBox](evidence/kali-front.png)
 
 **Project status: Completed — core lab setup, network validation, and post-snapshot connectivity checks succeeded.**
 
