@@ -92,6 +92,8 @@ The Nmap check establishes that the tool is installed and executable; **no port 
 
 ![Post-snapshot command output showing the interface, routes, gateway ping, and HTTPS response](evidence/17-post-snapshot-recovery-test.png)
 
+Timestamp note: The Windows host and Kali Linux guest displayed different clock values during evidence capture. The screenshots are retained as captured records. Network verification is based on the recorded interface configuration, routing table, gateway ping results, DNS lookup, and external HTTPS response—not on matching host and guest timestamps. The clock discrepancy was not independently diagnosed as part of this task.
+
 ## Evidence index
 
 All 17 supplied screenshots are included in `evidence/`, with descriptive, repository-safe filenames. Select any filename to inspect the full image.
