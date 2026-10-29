@@ -1,0 +1,10 @@
+# Virtual machine state and disk images should not be committed
+*.vdi
+*.vbox
+*.vbox-prev
+*.sav
+*.ova
+*.ovf
+*.log
+.DS_Store
+Thumbs.db
