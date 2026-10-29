@@ -1,5 +1,7 @@
 # WK1-PM1 — VirtualBox and Kali Linux Cybersecurity Lab Setup
 
+![Kali Linux cybersecurity lab running in Oracle VirtualBox](evidence/07-kali-desktop.png)
+
 **Project status: Completed — core lab setup, network validation, and post-snapshot connectivity checks succeeded.**
 
 This repository documents the implementation of the **WK1-PM1 Week 1 / Project Module 1** lab task: build a VirtualBox-based Kali Linux environment for cybersecurity and ethical-hacking practice, configure a custom NAT Network, assign Kali the required static IPv4 address, and verify connectivity. The work also records two troubleshooting exercises encountered during setup.
