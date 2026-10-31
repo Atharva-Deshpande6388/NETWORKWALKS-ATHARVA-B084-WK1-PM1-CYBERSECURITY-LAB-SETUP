@@ -179,3 +179,10 @@ The final configuration and recovery checks were successful. The duplicate-addre
 ## Evidence file references
 
 The main repository README maps the captured checks to evidence files in `../evidence/`. The key captures are `08-kali-ip-address.png`, `09-kali-routing-table.png`, `10-networkmanager-profile.png`, `11-gateway-ping-test.png`, `12-external-https-test.png`, `13-dns-resolution-test.png`, `14-nmap-version.png`, `15-virtualbox-snapshot-created.png`, and `17-post-snapshot-recovery-test.png`.
+
+<!--
+PROJECT PROVENANCE
+Original Author: Atharva Deshpande
+Project Reference: AD-WK1-PM1-2026
+Original Repository: Atharva-Deshpande6388
+-->
