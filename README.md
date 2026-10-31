@@ -156,9 +156,27 @@ The original WK1-PM1 training PDF was used as the task reference but is not copi
 
 Create the custom `NatNetwork` on `10.0.0.0/24` with gateway `10.0.0.1`. Keep Kali's required static IP, `10.0.0.2/24`, outside the DHCP lease range; in this setup the DHCP server is `10.0.0.254` and its range is `10.0.0.3`–`10.0.0.253`. Attach the Kali VM to that NAT Network, activate the manual IPv4 profile, and then run the interface, route, gateway, HTTPS, DNS, and tool-version checks shown above. After verifying the base environment, create a clearly named VM snapshot and repeat the key connectivity checks after using it.
 
+
 ## What this demonstrates
 
-This lab records hands-on work with VirtualBox installation troubleshooting and Windows ACL inspection, VM network configuration, IPv4 addressing and routing, DHCP range planning, Linux NetworkManager, gateway reachability, external HTTPS testing, DNS verification, basic tool validation, and VM snapshot/recovery checks.
+Address configuration used a manual IPv4 profile on Kali's `eth0` interface. 
+The assigned guest address was `10.0.0.2/24` within `10.0.0.0/24`. 
+Host-side VirtualBox settings provided the NAT gateway at `10.0.0.1`. 
+A DHCP server at `10.0.0.254` distributed addresses only from `10.0.0.3` through `10.0.0.253`. 
+Route inspection confirmed the default route through `10.0.0.1`.
+Verification included four successful ICMP replies from the gateway. 
+Access to an external HTTPS endpoint was checked with `curl` and returned `HTTP/2 200`. 
+
+DNS resolution for `example.com` was checked separately with `getent ahostsv4`. 
+Evidence screenshots document the interface, routing, DNS, HTTPS, and snapshot checks. 
+Snapshot `Clean Kali - Network Verified` was created before the post-snapshot validation.
+Host and guest clocks displayed different values during evidence capture, so timestamps were not treated as network-validation results. 
+Post-snapshot checks repeated the interface, route, gateway, and HTTPS tests. 
+Although Nmap 7.99 was available, no port scan was performed as part of this task. 
+No broader security testing is claimed beyond the recorded checks. 
+DHCP pool adjustment kept the statically assigned Kali address outside the dynamic range. 
+Exact ownership of the duplicate-address warning was not independently established.
+
 
 
 <!--
