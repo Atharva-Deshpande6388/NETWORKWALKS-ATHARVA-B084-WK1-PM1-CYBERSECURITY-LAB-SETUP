@@ -173,7 +173,14 @@ After using the snapshot, the recovery check re-ran the interface, routing, gate
 
 The incident demonstrated that successful DHCP connectivity does not necessarily satisfy a lab's required addressing scheme. The DHCP server address and lease range should be checked before assigning a static address within the same subnet. NetworkManager logs are useful for diagnosing duplicate-address detection, while interface and route output confirm the configuration actually in use. Gateway reachability, external HTTPS access, DNS resolution, and tool availability should be checked independently because each validates a different part of the environment.
 
-The final configuration and recovery checks were successful. The duplicate-address warning was observed and documented, while its exact originating device was left unspecified because it was not independently identified.
+<!--The final configuration and recovery checks were successful. The duplicate-address warning was observed and documented, while its exact originating device was left unspecified because it was not independently identified.-->
+
+Address allocation initially placed Kali at `10.0.0.3/24` through DHCP. The lab requirement instead called for static `10.0.0.2/24`. Host-side inspection of `VBoxManage list dhcpservers` showed the DHCP server configured at `10.0.0.2`, with a dynamic range beginning at `10.0.0.3` and ending at `10.0.0.254`. Adjusting the server to `10.0.0.254` and the lease range to `10.0.0.3`–`10.0.0.253` excluded the required static address from dynamic allocation. Restarting the guest was followed by `eth0` appearing UP at `10.0.0.2/24`.
+
+Verification with `ip route` showed the default gateway at `10.0.0.1`. A four-packet ping check returned four replies without packet loss. DNS resolution for `example.com` succeeded with `getent ahostsv4`. External HTTPS testing with `curl` returned `HTTP/2 200`. Snapshot `Clean Kali - Network Verified` was created on 27 October 2026.
+
+However, duplicate-address detection reported MAC address `08:00:27:DB:80:4B`, whose owner was not independently identified. Post-snapshot tests repeated the interface, route, ping, and HTTPS checks. A version check confirmed Nmap 7.99 was installed and executable. No port scan was performed as part of this task. DNS was verified separately because the captured NetworkManager profile had a blank per-connection DNS value. Evidence files preserve the corresponding network and recovery checks.
+
 
 
 ## Evidence file references
