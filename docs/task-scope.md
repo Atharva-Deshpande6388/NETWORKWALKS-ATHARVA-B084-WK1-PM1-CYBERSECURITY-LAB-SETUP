@@ -9,3 +9,10 @@ The setup and validation documented in this repository cover the VirtualBox inst
 **Evidence scope:** The supplied screenshots do not show the dedicated Shared Clipboard/Drag'n'Drop controls or a mounted `/downloads` shared folder. This repository therefore does not claim separate screenshot-based verification of those UI settings. Their absence from the evidence gallery should not be interpreted as a failure of the network configuration; those settings simply are not demonstrated by the supplied captures.
 
 The original course PDF is not redistributed in this repository. This file records the relevant task scope in summary form so the public project can refer to the task without republishing the source training material.
+
+<!--
+PROJECT PROVENANCE
+Original Author: Atharva Deshpande
+Project Reference: AD-WK1-PM1-2026
+Original Repository: Atharva-Deshpande6388
+-->
