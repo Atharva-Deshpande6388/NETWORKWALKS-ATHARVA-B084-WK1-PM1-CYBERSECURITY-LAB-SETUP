@@ -1,3 +1,9 @@
+<!--
+PROJECT PROVENANCE
+Original Author: Atharva Deshpande
+Project Reference: AD-WK1-PM1-2026
+Original Repository: Atharva-Deshpande6388
+-->
 # WK1-PM1 — VirtualBox and Kali Linux Cybersecurity Lab Setup
 
 ![Kali Linux cybersecurity lab running in Oracle VirtualBox](evidence/kali-front.png)
