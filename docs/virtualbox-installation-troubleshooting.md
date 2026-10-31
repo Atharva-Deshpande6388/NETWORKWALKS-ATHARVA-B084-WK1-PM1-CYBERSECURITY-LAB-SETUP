@@ -135,3 +135,10 @@ These later operations confirm that the installed VirtualBox command-line tools 
 ## Evidence included in this repository
 
 The initial installer error is shown in [`../evidence/01-virtualbox-installer-directory-error.png`](../evidence/01-virtualbox-installer-directory-error.png). The installer dialog image is cropped to remove unrelated browser/account UI while retaining the error message and version. The before-and-after ACL output is recorded in this report; separate ACL terminal screenshots were not included in the supplied evidence set. Successful installation is further supported by subsequent use of `G:\VBox\VBoxManage` during lab network configuration and by the VirtualBox Manager/Kali VM captures in the evidence folder.
+
+<!--
+PROJECT PROVENANCE
+Original Author: Atharva Deshpande
+Project Reference: AD-WK1-PM1-2026
+Original Repository: Atharva-Deshpande6388
+-->
