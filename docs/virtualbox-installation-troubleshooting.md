@@ -126,11 +126,18 @@ These later operations confirm that the installed VirtualBox command-line tools 
 | VirtualBox CLI usable for subsequent lab configuration | Confirmed by later `VBoxManage` commands |
 
 ## Lessons learned
-
+<!--
 1. Inspect the directory ACL before changing permissions.
 2. Use the actual `icacls` output to identify potentially over-permissive entries instead of changing permissions blindly.
 3. Scope permission changes narrowly, and do not add `/T` unless recursive changes are specifically needed and understood.
 4. Verify both the permission change and the application outcome. Here, the updated ACL was followed by a successful installation and subsequent use of `VBoxManage`.
+-->
+At first, the VirtualBox installer rejected `G:\VBox` with an installation-directory security error. The message did not identify the exact permission entry responsible. Host-side `icacls G:\VBox` output showed inherited permissions for `NT AUTHORITY\Authenticated Users`. ACL inspection showed that this principal had inherited Modify permissions on the displayed installation directory. Review of the before-and-after evidence treated that entry as the likely cause rather than a confirmed installer diagnosis.
+
+Verification after the ACL changes showed no `Authenticated Users` entry in the displayed directory ACL. Administrators and SYSTEM retained Full Control, while Users retained Read & Execute permissions. Disabling inheritance with `/inheritance:d` copied inherited permissions into explicit entries on `G:\VBox`. Existing child files and subdirectories were not recursively modified because `/T` was not used. Subsequent VirtualBox installation completed successfully after the permission correction.
+
+Host-side use of `G:\VBox\VBoxManage` confirmed that the command-line tools were available for subsequent lab configuration. Post-installation commands successfully inspected and modified the NAT Network and DHCP settings. Although this confirms that the installation was operational, it does not establish identical permissions across every child path. No recursive ACL verification is claimed. Directory permissions should be inspected before making changes, and modifications should be scoped narrowly. Evidence and subsequent VirtualBox usage together support the successful installation.
+
 
 ## Evidence included in this repository
 
