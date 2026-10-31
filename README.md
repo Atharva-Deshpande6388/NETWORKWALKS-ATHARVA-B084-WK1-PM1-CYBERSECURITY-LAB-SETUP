@@ -1,9 +1,3 @@
-<!--
-PROJECT PROVENANCE
-Original Author: Atharva Deshpande
-Project Reference: AD-WK1-PM1-2026
-Original Repository: Atharva-Deshpande6388
--->
 # WK1-PM1 — VirtualBox and Kali Linux Cybersecurity Lab Setup
 
 ![Kali Linux cybersecurity lab running in Oracle VirtualBox](evidence/kali-front.png)
@@ -165,3 +159,11 @@ Create the custom `NatNetwork` on `10.0.0.0/24` with gateway `10.0.0.1`. Keep Ka
 ## What this demonstrates
 
 This lab records hands-on work with VirtualBox installation troubleshooting and Windows ACL inspection, VM network configuration, IPv4 addressing and routing, DHCP range planning, Linux NetworkManager, gateway reachability, external HTTPS testing, DNS verification, basic tool validation, and VM snapshot/recovery checks.
+
+
+<!--
+PROJECT PROVENANCE
+Original Author: Atharva Deshpande
+Project Reference: AD-WK1-PM1-2026
+Original Repository: Atharva-Deshpande6388
+-->
