@@ -141,7 +141,7 @@ Host-side use of `G:\VBox\VBoxManage` confirmed that the command-line tools were
 
 ## Evidence included in this repository
 
-The initial installer error is shown in [`../evidence/01-virtualbox-installer-directory-error.png`](../evidence/01-virtualbox-installer-directory-error.png). The installer dialog image is cropped to remove unrelated browser/account UI while retaining the error message and version. The before-and-after ACL output is recorded in this report; separate ACL terminal screenshots were not included in the supplied evidence set. Successful installation is further supported by subsequent use of `G:\VBox\VBoxManage` during lab network configuration and by the VirtualBox Manager/Kali VM captures in the evidence folder.
+The initial installer error is shown in ![VirtualBox 7.2.22 installer displaying the Invalid installation directory error](../evidence/01-virtualbox-installer-directory-error.png). The installer dialog image is cropped to remove unrelated browser/account UI while retaining the error message and version. The before-and-after ACL output is recorded in this report; separate ACL terminal screenshots were not included in the supplied evidence set. Successful installation is further supported by subsequent use of `G:\VBox\VBoxManage` during lab network configuration and by the VirtualBox Manager/Kali VM captures in the evidence folder.
 
 <!--
 PROJECT PROVENANCE
